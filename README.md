@@ -1,25 +1,18 @@
 using System;
-//class medico
-public class Medico
+
+public class Computadora 
 {
-    public string Especialidad {get; set;}
-    public void Atender(Paciente p)
-    {
-        Console.WriteLine($"Atendiendo a {p.Nombre} en la clinica de {Especialidad}");
-    }
-}
-//class paciente
-public class Paciente
-{
-    public string Nombre{get; set;}
-}
-class Program
-{
-    static void Main()
-    {
-        Medico DrSimi=new Medico {Especialidad = "Pediatria"};
-        Paciente boy=new Paciente {Nombre="Jaunito"};
-        DrSimi.Atender(boy);
-    }
+    private Procesador procesador;
     
-}
+    public Computadora()
+    {
+        procesador= new Procesador();
+        procesador. Marca="AMD";
+        
+    }
+    public void Encender()
+    {
+    Console.WriteLine("La computadora esta encendida");
+    
+    procesador.mostrarMarca();
+    }
